@@ -5,6 +5,16 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+st.set_page_config(
+    page_title="kckv4rk streamlit Hello World",
+    page_icon="🐍",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items={
+        "About": "Learning how to use Streamlit basics - widgets, charts, layout, etc."
+    },
+)
+
 st.title("streamlit hello world st.title")
 
 st.write("hello world")
