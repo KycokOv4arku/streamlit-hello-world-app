@@ -24,7 +24,7 @@ with col1:
     # add widget
     x = st.slider("Choose and x value", 1, 10)
 with col2:
-    st.write("the value of :blue[***x***] is", x, "to change color \:blue[text]")
+    st.write("the value of :blue[***x***] is", x, r"to change color :blue[text]")
 
 
 # lets go through docs/basic concepts
@@ -67,9 +67,9 @@ st.area_chart(chart_data)
 st.subheader("st.line_chart()")
 st.line_chart(chart_data)
 
-st.subheader("st.map() numpy generates 1000 points around SF coords")
+st.subheader("st.map() numpy generates 1000 points around Moscow coords")
 map_data = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4], columns=["lat", "lon"]
+    np.random.randn(1000, 2) / [10, 10] + [55.7558, 37.6173], columns=["lat", "lon"]
 )
 st.map(map_data)
 
@@ -88,3 +88,20 @@ st.subheader(
 st.text_input("Your name is", key="name")
 name = st.session_state.name
 st.write(f"Hello world{"" if not name else ', ' + name}!")
+
+# checkboxes help show/hide data
+st.subheader("to show/hide data checkbox helps")
+if st.checkbox("Show dataframe"):
+    chart_data
+    "the code how it's done"
+    st.markdown(
+        "```python\n"
+        "if st.checkbox('show dataframe'):\n"
+        "    chart_data"  #
+    )
+
+# selectbox for options
+st.subheader("selectbox for options")
+df2 = pd.DataFrame({"first column": [1, 2, 3, 4], "second column": [10, 20, 30, 40]})
+option = st.selectbox("Which number do you like best?", df2["first column"])
+"You selected: ", option
