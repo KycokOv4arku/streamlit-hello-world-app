@@ -17,8 +17,8 @@ study = {
     "Dec'24": 38 / 31,
     "Jan'25": 11.5 / 31,
     "Feb'25": 53 / 28,
-    "Mar'25": 100.5 / 31,
-    "Apr'25": 89 / 30,
+    "Mar'25": 78.5 / 31,
+    "Apr'25": 79 / 30,
     "May'25": 63.5 / 31,
 }
 # convert into DF and change to index to datetime
